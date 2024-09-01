@@ -7,6 +7,13 @@ A Nix overlay/package of Curseforge app. (Works only on darwin).
 
 
 ## Usage
+Yo can try out the package by using the following command.
+```sh
+nix run github:eveeifyeve/curseforge-nix#curseforge
+```
+
+### Using it by adding it to your system config:
+
 
 1. Add Input: 
 
