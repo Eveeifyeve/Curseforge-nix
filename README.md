@@ -1,4 +1,4 @@
-# CurseForge-Nix
+# Curseforge-Nix
 > [!WARNING]
 > This package is not maintained by the CurseForge team or is affiliated with CurseForge in any way.
 > This package only works on Darwin if you want linux support, please submit a pr and maintain it.
