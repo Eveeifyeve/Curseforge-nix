@@ -21,7 +21,7 @@
       {
         package.curseforge = pkgs.callPackage ./default.nix {};
         overlay = (final: prev: {
-          curseforge-overlay = final.callPackage ./. {};
+          curseforge = final.callPackage ./. {};
         });
       };
     };
