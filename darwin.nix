@@ -1,6 +1,5 @@
 { stdenv
 , pname
-, version
 , meta
 , fetchurl
 , undmg
@@ -8,27 +7,28 @@
 }:
 
 stdenv.mkDerivation {
-  inherit pname version;
+  inherit pname;
+
+  version = "1.1.97.962.g24733a46";
 
   src = fetchurl {
-    url = "https://curseforge.overwolf.com/downloads/curseforge-${version}.dmg";
-    hash = "sha256-2nFqrUElzGnJsDyLBxMnaO9s4EaVQqDnSz3R+l+BfZU=";
-  };
+    url = "";
+    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+  }; 
 
   nativeBuildInputs = [ undmg ];
 
   sourceRoot = ".";
 
   installPhase = ''
-    runHook preInstall
-
     mkdir -p $out/Applications
     cp -r *.app $out/Applications
-
-    runHook postInstall
   '';
+
+	updateScript = 
 
   meta = meta // {
     maintainers = with lib.maintainers; [ Enzime ];
   };
 }
+
